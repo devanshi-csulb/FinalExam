@@ -23,6 +23,17 @@
 
     </div>
 
+    <div id="prime"></div>
+    <div class="p-4" *ngIf="evenNumbers.length || numberSubmitted">
+      There are {{evenNumbers.length}} Even Numbers:
+    <div>
+      <ng-container *ngFor="let items of evenNumbers; let last=last">
+        {{items}} <span *ngIf="!last">,</span>
+      </ng-container>
+    </div>
+    </div>
+
+
     
     
     <script src="app.component.ts"></script>
